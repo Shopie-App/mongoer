@@ -1,0 +1,26 @@
+{
+    "name": "shopie/mongoer",
+    "description": "MongoDB simple ORM",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shopie",
+            "email": "dev@shopie.gr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Shopie\\Mongoer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Shopie\\Mongoer\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "mongodb/mongodb": "^1.19"
+    }
+}

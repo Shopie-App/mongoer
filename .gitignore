@@ -1,0 +1,7 @@
+/vendor
+.phpunit.result.cache
+*.DS_Store
+*.env
+*.lock
+*.phar
+*.bat
