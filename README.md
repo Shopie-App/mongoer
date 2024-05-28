@@ -1,6 +1,6 @@
 # MongoER
 
-Simple, non-opinionated, no-OCD coding micro ORM for MongoDB.
+Simple, non-opinionated, no-OCD coding micro ORM for MongoDB PHP.
 
 ## Installation
 
