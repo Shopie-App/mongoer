@@ -16,19 +16,5 @@ class ReadDbContextTest extends DbContext
 
     public function __construct()
     {
-        $this->properties = new PropertyRepositoryTest();
-
-        $this->users = new UserRepositoryTest();
-
-        $this->offices = new OfficeRepositoryTest();
-    }
-
-    public function configureRepositories(): void
-    {
-        $this->properties->setCollection(parent::db()->selectCollection('properties'));
-
-        $this->users->setCollection(parent::db()->selectCollection('app_users'));
-
-        $this->offices->setCollection(parent::db()->selectCollection('app_offices'));
     }
 }

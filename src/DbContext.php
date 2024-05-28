@@ -7,6 +7,7 @@ namespace Shopie\Mongoer;
 use MongoDB\Database;
 use Shopie\Mongoer\Provider\MongoDB;
 use Shopie\Mongoer\Provider\MongoDBOptions;
+use Shopie\Mongoer\RepositoryBuilder\RepositoryBuilder;
 
 abstract class DbContext
 {
@@ -25,5 +26,10 @@ abstract class DbContext
     public function connect(): bool
     {
         return $this->db->connect();
+    }
+
+    public function configureRepositories(): void
+    {
+        (new RepositoryBuilder())->build($this);
     }
 }
