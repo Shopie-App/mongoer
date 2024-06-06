@@ -195,4 +195,22 @@ abstract class Repository
 
         return $result->getModifiedCount();
     }
+
+    /**
+     * Deletes a document by its id.
+     */
+    public function deleteById(string $id): bool
+    {
+        $result = $this->collection->deleteOne(['_id' => new ObjectId($id)]);
+
+        if (!$result->isAcknowledged()) {
+            return false;
+        }
+
+        if ($result->getDeletedCount() == 0) {
+            return false;
+        }
+
+        return true;
+    }
 }
